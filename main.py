@@ -38,6 +38,8 @@ def load_language_packages(language_pairs):
             package_to_install = next(filter(lambda x: x.from_code == from_code and x.to_code == to_code, available_packages), None)
             if package_to_install:
                 argostranslate.package.install_from_path(package_to_install.download())
+            else:
+                print(f"Package not found for {from_code} to {to_code}")
         return available_packages
     except Exception as e:
         print(f"Error loading language packages: {e}")
@@ -70,6 +72,9 @@ def translate(request: TranslationRequest):
     Endpoint to translate text from one language to another.
     """
     try:
+        if not available_packages:
+            raise HTTPException(status_code=500, detail="No language packages loaded.")
+        
         translated_text = argostranslate.translate.translate(request.text, request.from_lang, request.to_lang)
         return {"translated_text": translated_text}
     except Exception as e:
