@@ -24,27 +24,27 @@ This document provides an overview of the Argos API built with [FastAPI](https:/
 
 1. **Clone the repository:**
 
-    ```bash
-    git clone https://github.com/Jaro-c/Argos-API.git
-    cd Argos-API
-    ```
+```bash
+git clone https://github.com/Jaro-c/Argos-API.git
+cd Argos-API
+```
 
 2. **Create a `.env` file:**
 
-    ```env
-    API_PORT=12448
-    LANGUAGES="en:ur,en:es"
-    ```
+```env
+API_PORT=12448
+LANGUAGES="en:ur,en:es"
+```
 
 3. **Build and run the Docker containers:**
 
-    ```bash
-    docker-compose up --build
-    ```
+```bash
+docker-compose up --build
+```
 
 4. **Access the API:**
 
-    Open your browser and go to `http://localhost:12448`
+Open your browser and go to `http://localhost:12448`
 
 ### Without Docker
 
@@ -57,40 +57,40 @@ This document provides an overview of the Argos API built with [FastAPI](https:/
 
 1.  **Clone the repository:**
 
-    ```bash
-    git clone https://github.com/Jaro-c/Argos-API.git
-    cd Argos-API
-    ```
+```bash
+git clone https://github.com/Jaro-c/Argos-API.git
+cd Argos-API
+```
 
 2.  **Create and activate a virtual environment:**
 
-    ```bash
-    python -m venv venv
-    source venv/bin/activate  # On Windows, use `venv/Scripts/activate`
-    ```
+```bash
+python -m venv venv
+source venv/bin/activate  # On Windows, use `venv/Scripts/activate`
+```
 
 3.  **Install the dependencies:**
 
-    ```bash
-    pip install -r requirements.txt
-    ```
+```bash
+pip install -r requirements.txt
+```
 
 4.  **Create a `.env` file:**
 
-    ```env
-    API_PORT=12448
-    LANGUAGES="en:ur,en:es"
-    ```
+```env
+API_PORT=12448
+LANGUAGES="en:ur,en:es"
+```
 
 5.  **Run the application:**
 
-    ```bash
-    uvicorn main:app --host 0.0.0.0 --port 12448
-    ```
+```bash
+uvicorn main:app --host 0.0.0.0 --port 12448
+```
 
 6.  **Access the API:**
 
-    Open your browser and go to `http://localhost:12448`
+Open your browser and go to `http://localhost:12448`
 
 ## API Endpoints
 
